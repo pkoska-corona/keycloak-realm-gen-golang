@@ -15,6 +15,7 @@ func main() {
 	}
 	realm := string(content)
 
-	realmId := gjson.Get(realm, "id")
-	println(realmId.String())
+	componentsArr := gjson.Get(realm, "components.org.keycloak.services.clientregistration.policy.ClientRegistrationPolity")
+	println(componentsArr.String())
+
 }
